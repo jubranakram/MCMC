@@ -4,7 +4,7 @@ from src.utils import pi_monte_carlo
 
 '''
 Calculate the value of pi using uniform random numbers (Monte Carlo simulation)
-
+Python code by: jubran akram
 '''
 
 if __name__ == "__main__":

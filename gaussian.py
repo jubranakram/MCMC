@@ -1,7 +1,10 @@
 import matplotlib.pyplot as plt
 import numpy as np
 from src.utils import gaussian
-
+'''
+Gaussian function
+Python code by: jubran akram
+'''
 if __name__ == "__main__":
 
     x = np.linspace(-5, 5, 100)

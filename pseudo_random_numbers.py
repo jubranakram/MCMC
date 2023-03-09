@@ -4,6 +4,7 @@ from src.utils import linear_congruential_generator
 
 '''
 Generate N pseudorandom numbers using linear congruential generator between 0 and M-1
+Python code by: jubran akram
 '''
 
 if __name__ == "__main__":

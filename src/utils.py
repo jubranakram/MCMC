@@ -1,5 +1,9 @@
 import numpy as np
 
+'''
+Utilities for Monte Carlo methods
+Python code by: jubran akram
+'''
 
 def gaussian(x: float, mu: float=0, std: float=1/np.sqrt(2)):
     '''Calculates the gaussian function for the input x '''
@@ -22,14 +26,17 @@ def linear_congruential_generator(upper_lim, lower_lim, N: int, seed: int = 0):
 
 def pi_monte_carlo(N: int):
     '''Calculates pi using Monte Carlo simulation'''    
-    count = 0
-    for _ in range(N):
-        # generate a pair of uniform random numbers (x, y) between 0 and 1
-        # if x**2 + y**2 < 1, the point is in the shaded region whose area is pi/4
-        if (np.random.uniform(0, 1, size=2)**2).sum() < 1:
-            count += 1
+    
+    r = (np.random.uniform(0, 1, size=(2, N))**2).sum(axis=0) < 1
+    
+    return 4*(r.sum()/N)
 
-    return 4*(count/N)
+def integral_with_uniform_random_numbers(f, N:int, a:float = 0, b:float = 1):
+    '''Calculates integral using uniform random numbers'''
+    
+    r = (b-a)*(f(np.random.uniform(a, b, size=N)).mean())
+    
+    return r
 
         
 

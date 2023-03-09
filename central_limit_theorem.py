@@ -6,6 +6,7 @@ Central limit theorem:
 
  Let's assume we have K sources of errors. Each source of error gives a uniform random number between
  -0.5 and +0.5. The total error is then the sum of K errors
+ Python code by: jubran akram
 '''
 
 if __name__ == "__main__":
